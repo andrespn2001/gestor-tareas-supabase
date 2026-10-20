@@ -1,0 +1,51 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0f172a; color: #e2e8f0;
+    min-height: 100vh; display: flex; justify-content: center; padding: 40px 20px;
+}
+.app-container {
+    background: #1e293b; border-radius: 15px; padding: 25px;
+    width: 100%; max-width: 500px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+h1 { text-align: center; color: #4ec9b0; font-size: 1.5rem; margin-bottom: 20px; }
+
+.controls { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+.input-group { display: flex; gap: 10px; }
+input, select {
+    padding: 10px; border: 1px solid #475569; border-radius: 8px;
+    background: #0f172a; color: white; font-family: inherit; outline: none;
+}
+input:focus, select:focus { border-color: #4ec9b0; }
+input[type="text"] { flex: 1; }
+
+button {
+    padding: 10px 15px; border: none; border-radius: 8px;
+    font-weight: 600; cursor: pointer; transition: 0.2s; font-family: inherit;
+}
+.btn-primary { background: #4ec9b0; color: #0f172a; }
+.btn-primary:hover { background: #3db89e; }
+.btn-danger { background: #ef4444; color: white; }
+.btn-danger:hover { background: #dc2626; }
+
+.filters-row { display: flex; gap: 5px; }
+.filter-btn { flex: 1; background: #334155; color: #cbd5e1; font-size: 0.85rem; }
+.filter-btn.active { background: #4ec9b0; color: #0f172a; }
+
+ul { list-style: none; margin-top: 20px; }
+li {
+    background: #0f172a; padding: 12px 15px; margin-bottom: 8px;
+    border-radius: 8px; display: flex; justify-content: space-between;
+    align-items: center; border-left: 3px solid #4ec9b0;
+}
+li.completed { border-left-color: #64748b; opacity: 0.7; }
+li.completed span.task-text { text-decoration: line-through; color: #64748b; }
+
+.task-info { flex: 1; cursor: pointer; display: flex; flex-direction: column; }
+.task-text { font-size: 0.95rem; }
+.badge { font-size: 0.7rem; padding: 2px 6px; border-radius: 4px; margin-top: 4px; width: fit-content; }
+.badge.alta { background: #ef4444; color: white; }
+.badge.media { background: #f59e0b; color: white; }
+.badge.baja { background: #10b981; color: white; }
+
+.delete-btn { background: none; border: none; color: #ef4444; font-size: 1.2rem; cursor: pointer; }
