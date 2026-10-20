@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor Supabase PRO - Andrés Lucas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <h1>☁️ Gestor Supabase PRO</h1>
+        
+        <div class="controls">
+            <div class="input-group">
+                <input type="text" id="taskInput" placeholder="Nueva tarea...">
+                <select id="priorityInput">
+                    <option value="baja">🟢 Baja</option>
+                    <option value="media" selected>🟡 Media</option>
+                    <option value="alta">🔴 Alta</option>
+                </select>
+                <button class="btn-primary" id="addButton" onclick="addTask()">Añadir</button>
+            </div>
+            
+            <input type="text" id="searchInput" placeholder="🔍 Buscar tarea..." oninput="searchTerm = this.value; renderTasks()">
+
+            <div class="filters-row">
+                <button class="filter-btn active" onclick="setFilter('all', this)">Todas</button>
+                <button class="filter-btn" onclick="setFilter('pending', this)">Pendientes</button>
+                <button class="filter-btn" onclick="setFilter('completed', this)">Completadas</button>
+            </div>
+            
+            <button class="btn-danger" onclick="limpiarCompletadas()">🧹 Limpiar Completadas</button>
+        </div>
+
+        <ul id="taskList"></ul>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
